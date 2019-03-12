@@ -8,7 +8,7 @@ describe(`Terms Page`, () => {
   });
 
   it(`should have the correct <h1> text`, () => {
-    const expected = `Terms`
+    const expected = `Terms`;
     expect(page.h1.getText()).to.eql(expected);
   });
 

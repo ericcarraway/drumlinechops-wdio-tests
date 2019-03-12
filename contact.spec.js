@@ -8,12 +8,12 @@ describe(`Contact Page`, () => {
   });
 
   it(`should have the correct <h1> text`, () => {
-    const expected = `Contact`
+    const expected = `Contact`;
     expect(page.h1.getText()).to.eql(expected);
   });
 
   it(`should have the correct submit button text`, () => {
-    const expected = `Send Message`
+    const expected = `Send Message`;
     expect(page.btnSubmit.getText()).to.eql(expected);
   });
 });
