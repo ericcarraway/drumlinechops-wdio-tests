@@ -8,7 +8,7 @@ class PrivacyPage {
     return $(`h1`);
   }
   get mainContentContainer() {
-    return $(`#privacy-content`)
+    return $(`#privacy-content`);
   }
 }
 
