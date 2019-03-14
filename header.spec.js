@@ -32,4 +32,18 @@ describe(`header`, () => {
       expect(header.logo.getAttribute(`src`)).to.include(expected);
     });
   });
+
+  describe(`links`, () => {
+    it(`should have eight links`, () => {
+      expect(header.links.length).to.eql(8);
+    });
+  });
+
+  // logo
+  describe(`link 1 of 8`, () => {
+    it(`should link to homepage`, () => {
+      const expected = `https://drumlinechops.com/`;
+      expect(header.links[0].getAttribute(`href`)).to.eql(expected);
+    });
+  });
 });
