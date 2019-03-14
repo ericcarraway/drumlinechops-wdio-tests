@@ -1,5 +1,4 @@
-// https: //drumlinechops.com/
-
+// https://drumlinechops.com/
 const Header = require(`./page-objects/header.page`);
 const header = new Header();
 

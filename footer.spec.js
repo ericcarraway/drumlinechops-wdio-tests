@@ -1,5 +1,4 @@
-// https: //drumlinechops.com/
-
+// https://drumlinechops.com/
 const Footer = require(`./page-objects/footer.page`);
 const footer = new Footer();
 
