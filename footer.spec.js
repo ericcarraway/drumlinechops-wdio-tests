@@ -112,6 +112,15 @@ describe(`footer`, () => {
     it(`should have the correct link`, () => {
       expect(footer.socialLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
     });
+
+    it(`should have a PNG image`, () => {
+      expect(footer.socialLinks[idx].$(`a img`).getAttribute(`src`)).to.include(`.png`);
+    });
+
+    it(`should have a "Facebook" image`, () => {
+      const expected = `${baseUrl}/assets/social/facebook`;
+      expect(footer.socialLinks[idx].$(`a img`).getAttribute(`src`)).to.include(expected);
+    });
   });
 
   describe(`social link 2 of 3 - Twitter`, () => {
@@ -121,6 +130,15 @@ describe(`footer`, () => {
     it(`should have the correct link`, () => {
       expect(footer.socialLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
     });
+
+    it(`should have a PNG image`, () => {
+      expect(footer.socialLinks[idx].$(`a img`).getAttribute(`src`)).to.include(`.png`);
+    });
+
+    it(`should have a "Twitter" image`, () => {
+      const expected = `${baseUrl}/assets/social/twitter`;
+      expect(footer.socialLinks[idx].$(`a img`).getAttribute(`src`)).to.include(expected);
+    });
   });
 
   describe(`social link 3 of 3 - YouTube`, () => {
@@ -129,6 +147,15 @@ describe(`footer`, () => {
 
     it(`should have the correct link`, () => {
       expect(footer.socialLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+
+    it(`should have a PNG image`, () => {
+      expect(footer.socialLinks[idx].$(`a img`).getAttribute(`src`)).to.include(`.png`);
+    });
+
+    it(`should have a "YouTube" image`, () => {
+      const expected = `${baseUrl}/assets/social/youtube`;
+      expect(footer.socialLinks[idx].$(`a img`).getAttribute(`src`)).to.include(expected);
     });
   });
 
