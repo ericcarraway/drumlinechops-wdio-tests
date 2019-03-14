@@ -23,6 +23,12 @@ describe(`footer`, () => {
     });
   });
 
+  describe(`layout`, () => {
+    it(`should have three primary elements`, () => {
+      expect(footer.primaryElements.length).to.eql(3);
+    });
+  });
+
   describe(`navigation links`, () => {
     it(`should have five links`, () => {
       expect(footer.navigationLinks.length).to.eql(5);

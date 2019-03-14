@@ -3,6 +3,10 @@ class Footer {
     return $(`footer`);
   }
 
+  get primaryElements() {
+    return $$(`footer > div > *`);
+  }
+
   get navigationLinks() {
     return $$(`.footer-menu ul:first-child li`);
   }
