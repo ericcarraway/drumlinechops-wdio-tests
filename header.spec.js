@@ -21,4 +21,15 @@ describe(`header`, () => {
       expect(headerText).to.include(`Login`);
     });
   });
+
+  describe(`logo`, () => {
+    it(`should be a PNG file`, () => {
+      expect(header.logo.getAttribute(`src`)).to.include(`.png`);
+    });
+
+    it(`should come from the correct directory`, () => {
+      const expected = `/assets/logo/`;
+      expect(header.logo.getAttribute(`src`)).to.include(expected);
+    });
+  });
 });
