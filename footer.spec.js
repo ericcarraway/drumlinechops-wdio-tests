@@ -105,6 +105,33 @@ describe(`footer`, () => {
     });
   });
 
+  describe(`social link 1 of 3 - Facebook`, () => {
+    const idx = 0;
+    const link = `https://www.facebook.com/DrumlineChops`;
+
+    it(`should have the correct link`, () => {
+      expect(footer.socialLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
+  describe(`social link 2 of 3 - Twitter`, () => {
+    const idx = 1;
+    const link = `https://twitter.com/DrumlineChops`;
+
+    it(`should have the correct link`, () => {
+      expect(footer.socialLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
+  describe(`social link 3 of 3 - YouTube`, () => {
+    const idx = 2;
+    const link = `http://www.youtube.com/user/DrumlineChopsChannel`;
+
+    it(`should have the correct link`, () => {
+      expect(footer.socialLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
   describe(`copyright`, () => {
     it(`should the correct text`, () => {
       const expected = `© 2012-2019 Drumline Chops`;
