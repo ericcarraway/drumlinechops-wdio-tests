@@ -57,6 +57,48 @@ describe(`footer`, () => {
     });
   });
 
+  describe(`navigation link 3 of 5 - "Terms"`, () => {
+    const idx = 2;
+    const text = `Terms`;
+    const link = `${baseUrl}/terms`;
+
+    it(`should have the correct text`, () => {
+      expect(footer.navigationLinks[idx].getText()).to.eql(text);
+    });
+
+    it(`should have the correct link`, () => {
+      expect(footer.navigationLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
+  describe(`navigation link 4 of 5 - "Blog"`, () => {
+    const idx = 3;
+    const text = `Blog`;
+    const link = `${baseUrl}/posts`;
+
+    it(`should have the correct text`, () => {
+      expect(footer.navigationLinks[idx].getText()).to.eql(text);
+    });
+
+    it(`should have the correct link`, () => {
+      expect(footer.navigationLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
+  describe(`navigation link 5 of 5 - "Contact"`, () => {
+    const idx = 4;
+    const text = `Contact`;
+    const link = `${baseUrl}/contact`;
+
+    it(`should have the correct text`, () => {
+      expect(footer.navigationLinks[idx].getText()).to.eql(text);
+    });
+
+    it(`should have the correct link`, () => {
+      expect(footer.navigationLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
   describe(`social links`, () => {
     it(`should have three links`, () => {
       expect(footer.socialLinks.length).to.eql(3);
