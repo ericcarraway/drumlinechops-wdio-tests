@@ -98,53 +98,57 @@ describe(`header`, () => {
 
   describe(`link 5 of 8 - "Practice"`, () => {
     const idx = 4;
+    const text = `Practice`;
+    const link = `https://drumlinechops.com/practice_routine`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`Practice`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to "/practice_routine"`, () => {
-      const expected = `https://drumlinechops.com/practice_routine`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
   describe(`link 6 of 8 - "Blog"`, () => {
     const idx = 5;
+    const text = `Blog`;
+    const link = `https://drumlinechops.com/posts`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`Blog`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to "/posts"`, () => {
-      const expected = `https://drumlinechops.com/posts`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
   describe(`link 7 of 8 - "Signup" button`, () => {
     const idx = 6;
+    const text = `Signup`;
+    const link = `https://drumlinechops.com/users/sign_up`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`Signup`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to "users/sign_up"`, () => {
-      const expected = `https://drumlinechops.com/users/sign_up`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
   describe(`link 8 of 8 - "Login" button`, () => {
     const idx = 7;
+    const text = `Login`;
+    const link = `https://drumlinechops.com/users/sign_in`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`Login`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to "users/sign_in"`, () => {
-      const expected = `https://drumlinechops.com/users/sign_in`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 });
