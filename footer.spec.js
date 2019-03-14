@@ -2,6 +2,8 @@
 const Footer = require(`./page-objects/footer.page`);
 const footer = new Footer();
 
+const baseUrl = `https://drumlinechops.com`;
+
 describe(`footer`, () => {
   before(() => {
     browser.url(`/`);
@@ -24,6 +26,34 @@ describe(`footer`, () => {
   describe(`navigation links`, () => {
     it(`should have five links`, () => {
       expect(footer.navigationLinks.length).to.eql(5);
+    });
+  });
+
+  describe(`navigation link 1 of 5 - "About"`, () => {
+    const idx = 0;
+    const text = `About`;
+    const link = `${baseUrl}/about`;
+
+    it(`should have the correct text`, () => {
+      expect(footer.navigationLinks[idx].getText()).to.eql(text);
+    });
+
+    it(`should have the correct link`, () => {
+      expect(footer.navigationLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
+    });
+  });
+
+  describe(`navigation link 2 of 5 - "Privacy"`, () => {
+    const idx = 1;
+    const text = `Privacy`;
+    const link = `${baseUrl}/privacy`;
+
+    it(`should have the correct text`, () => {
+      expect(footer.navigationLinks[idx].getText()).to.eql(text);
+    });
+
+    it(`should have the correct link`, () => {
+      expect(footer.navigationLinks[idx].$(`a`).getAttribute(`href`)).to.eql(link);
     });
   });
 
