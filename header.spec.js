@@ -42,49 +42,57 @@ describe(`header`, () => {
   // logo
   describe(`link 1 of 8 - logo`, () => {
     const idx = 0;
+    const text = ``;
+    const link = `https://drumlinechops.com/`;
 
-    it(`should link to the homepage`, () => {
-      const expected = `https://drumlinechops.com/`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct text`, () => {
+      expect(header.links[idx].getText()).to.eql(text);
+    });
+
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
   describe(`link 2 of 8 - "Home"`, () => {
     const idx = 1;
+    const text = `Home`;
+    const link = `https://drumlinechops.com/`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`Home`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to the homepage`, () => {
-      const expected = `https://drumlinechops.com/`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
   describe(`link 3 of 8 - "About"`, () => {
     const idx = 2;
+    const text = `About`;
+    const link = `https://drumlinechops.com/about`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`About`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to "/about"`, () => {
-      const expected = `https://drumlinechops.com/about`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
   describe(`link 4 of 8 - "Lessons"`, () => {
     const idx = 3;
+    const text = `Lessons`;
+    const link = `https://drumlinechops.com/lessons`;
 
     it(`should have the correct text`, () => {
-      expect(header.links[idx].getText()).to.eql(`Lessons`);
+      expect(header.links[idx].getText()).to.eql(text);
     });
 
-    it(`should link to "/lessons"`, () => {
-      const expected = `https://drumlinechops.com/lessons`;
-      expect(header.links[idx].getAttribute(`href`)).to.eql(expected);
+    it(`should have the correct link`, () => {
+      expect(header.links[idx].getAttribute(`href`)).to.eql(link);
     });
   });
 
