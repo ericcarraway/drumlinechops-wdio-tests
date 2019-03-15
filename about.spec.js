@@ -2,6 +2,8 @@
 const AboutPage = require(`./page-objects/about.page`);
 const page = new AboutPage();
 
+const baseUrl = `https://drumlinechops.com`;
+
 describe(`About Page`, () => {
   before(() => {
     browser.url(page.url);
@@ -22,6 +24,29 @@ describe(`About Page`, () => {
 
     it(`should include five paragraphs`, () => {
       expect(page.mainContent.$$(`p`).length).to.eql(5);
+    });
+  });
+
+  it(`should have the correct <h2> text`, () => {
+    const expected = `Get FREE Drumline Exercises Today!`;
+    expect(page.h2.getText()).to.eql(expected);
+  });
+
+  describe(`banner image`, () => {
+    it(`should have the correct "src" attribute`, () => {
+      const expected = `${baseUrl}/assets/banner`;
+      expect(page.bannerImg.getAttribute(`src`)).to.include(expected);
+    });
+
+    it(`should be a JPG file`, () => {
+      expect(page.bannerImg.getAttribute(`src`)).to.include(`.jpg`);
+    });
+  });
+
+  describe(`footer`, () => {
+    it(`should include the copyright`, () => {
+      const expected = `© 2012-2019 Drumline Chops`;
+      expect(page.footer.getText()).to.include(expected);
     });
   });
 });
